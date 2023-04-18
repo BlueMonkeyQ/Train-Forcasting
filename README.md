@@ -1,44 +1,13 @@
-# Train-Forcasting
-
-## Reference
+# Real-Time Train Crowding Forecasting
+## Marc Ebersberger, Daniel Harnden, Cristina Radian, Shelby Smith
 ---
 
-*   [Train Data](https://challengedata.ens.fr/participants/challenges/89/)
-
-
-### Grouping Data
+## Research Question
 ---
 
-Grouping stations by there density to reduce number of variable names
-Ex: High density, Medium density, low density
+This project uses historical data provided by SNCR-Transilien, a French transit company, to predict a given train's crowding factor, which is defined as the ratio of pasengers on a train relative to its total possible capacity. Our supervised machine learning algorithm uses the crowding factor of previous trains at the current station and the crowding factor of the current train at previous stations to predict train occupancy rates in real time.
 
-Getting average density for each station at a particular time
-Get general statistics per station
-Starting out, just P1Q0
-
-Baseline Model
-
-### Handling Null Values
+## References
 ---
 
-*   **P&Q**
-
-1)  235 rows that have 0 P&Q data
-2)  Needs to be double checked
-3)  Remove them if they have all nan
-
-*   **P**
-
-1)  Check if all 6am trains have no previous train data
-2)  Potentially make all nan -> median (backed by graph notebook)
-
-*   **q**
-
-1)  Check if all 6am trains have no previous station data
-2)  Potentially make all nan -> median (backed by graph notebook)
-
-*   **Hour**
-
-1)  based on train number
-2)  pick the hour that has the majority of train numbers
-3)  Fill in hour that has most votes for train number
+*   [Data (Provided by SNCF-Transilien)](https://challengedata.ens.fr/participants/challenges/89/)
